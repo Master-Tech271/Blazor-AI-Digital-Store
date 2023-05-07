@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rWFNNWWfov+1FOB6HUG7//5ZngAJ8rq/rHvYX8bD+IjFoinbBZjNMaR31mYms3AU2fCTx6uMjCTvLw3SW+4GUg==",
+  "success": true,
+  "projectFilePath": "D:\\personal\\Dot Net Projects\\User-Behaviour\\DataModels\\DataModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Unthinkable\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

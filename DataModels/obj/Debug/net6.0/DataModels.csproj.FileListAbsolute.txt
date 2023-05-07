@@ -1,0 +1,12 @@
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\bin\Debug\net6.0\DataModels.deps.json
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\bin\Debug\net6.0\DataModels.dll
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\bin\Debug\net6.0\DataModels.pdb
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\DataModels.csproj.AssemblyReference.cache
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\DataModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\DataModels.AssemblyInfoInputs.cache
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\DataModels.AssemblyInfo.cs
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\DataModels.csproj.CoreCompileInputs.cache
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\DataModels.dll
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\refint\DataModels.dll
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\DataModels.pdb
+D:\personal\Dot Net Projects\User-Behaviour\DataModels\obj\Debug\net6.0\ref\DataModels.dll

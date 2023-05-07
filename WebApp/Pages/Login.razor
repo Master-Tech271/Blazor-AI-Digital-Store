@@ -1,0 +1,62 @@
+﻿@page "/login"
+<div class="Login">
+    <RadzenCard class="@CardClass" style="max-width: 600px;">
+        @if (IsLogin)
+        {
+            <RadzenTemplateForm Data="User">
+                <RadzenLogin AllowRegister="true" AllowResetPassword="false" Username=@User.Email Password=@User.Password
+                         AllowRememberMe="true" RememberMe="@RememberMe"
+                         Login="OnLoginAsync"
+                         ResetPassword="OnResetPassword"
+                         Register="OnRegister" />
+            </RadzenTemplateForm>
+        }
+        else
+        {
+            <RadzenText TextStyle="TextStyle.H4" class="rz-color-primary-light"><strong>Registration</strong></RadzenText>
+            <RadzenTemplateForm TItem="UserModel" Data="User" Submit="RegisterAsync">
+                <RadzenStack Gap="1rem" Class="rz-p-sm-12">
+                    <RadzenFormField Text="First Name" Variant="@Variant">
+                        <ChildContent>
+                            <RadzenTextBox Name="FirstName" @bind-Value=@User.FirstName />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="FirstName" Text="First name is required." />
+                            <RadzenLengthValidator Component="FirstName" />
+                        </Helper>
+                    </RadzenFormField>
+                    <RadzenFormField Text="Last Name" Variant="@Variant">
+                        <ChildContent>
+                            <RadzenTextBox Name="LastName" @bind-Value=@User.LastName />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="LastName" Text="Last name is required." />
+                            <RadzenLengthValidator Component="LastName" />
+                        </Helper>
+                    </RadzenFormField>
+                    <RadzenFormField Text="Email" Variant="@Variant" >
+                        <ChildContent>
+                            <RadzenTextBox Name="Email" @bind-Value=@User.Email />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="Email" Text="Email is required." />
+                            <RadzenEmailValidator Component="Email" Text="Invalid Email." />
+                            <RadzenLengthValidator Component="Email" />
+                        </Helper>
+                    </RadzenFormField>
+                    <RadzenFormField type="password" Text="Password" Variant="@Variant">
+                        <ChildContent>
+                            <RadzenTextBox Name="Password" @bind-Value=@User.Password />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="Password" Text="Password is required." />
+                            <RadzenLengthValidator Component="Password" />
+                        </Helper>
+                    </RadzenFormField>
+                    <RadzenButton ButtonType="ButtonType.Submit" Text="Submit"></RadzenButton>
+                    <RadzenButton ButtonType="ButtonType.Button" Text="Login" Click="OnRegister"></RadzenButton>
+                </RadzenStack>
+            </RadzenTemplateForm>
+        }
+    </RadzenCard>
+</div>

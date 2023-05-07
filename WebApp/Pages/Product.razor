@@ -1,0 +1,48 @@
+﻿@page "/"
+@using DataModels;
+<div class="Product">
+    
+    @if (RecommendedProducts.Count > 0)
+    {
+        <RadzenText TextStyle="TextStyle.H6" class="rz-color-primary-light"><strong>Recommended Products</strong></RadzenText>
+
+        <RadzenRow class="">
+
+            @foreach (var Product in Products)
+            {
+                <RadzenColumn SizeMD="4" Size="6" SizeXS="12" SizeSM="12">
+                    <WebApp.Components.ProductCard Product="Product" OrderNow="OrderNowAsync"/>
+                </RadzenColumn>
+            }
+
+        </RadzenRow>
+    }
+
+
+    <RadzenText TextStyle="TextStyle.H6" class="rz-color-primary-light"><strong>Products</strong></RadzenText>
+
+    <RadzenRow class="">
+        @foreach(var Product in Products)
+        {
+            <RadzenColumn SizeMD="4" Size="6" SizeXS="12" SizeSM="12">
+                <WebApp.Components.ProductCard Product="Product" OrderNow="OrderNowAsync" />
+            </RadzenColumn>
+        }
+
+    </RadzenRow>
+
+    @if (HelperClass.IsLoading)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        if (RecommendedProducts.Count == 0
+        || Products.Count == 0)
+        {
+            <p>No Products Found</p>
+        }
+    }
+
+    
+</div>

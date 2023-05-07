@@ -1,0 +1,27 @@
+﻿<div class="Feedback">
+    <RadzenCard class="" style="max-width: 600px;">
+        <RadzenTemplateForm TItem="OrderFeedbackModel" Data="OrderFeedbackModel" Submit="SubmitAsync">
+            <RadzenStack Gap="1rem" Class="rz-p-sm-12">
+                <RadzenFormField Text="Feedback" Variant="@Variant">
+                    <ChildContent>
+                        <RadzenTextArea Rows="3" Name="Feedback" @bind-Value=@OrderFeedbackModel.Feedback />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="Feedback" Text="Feedback is required." />
+                        <RadzenLengthValidator Component="Feedback" />
+                    </Helper>
+                </RadzenFormField>
+                <RadzenFormField Text="Review" Variant="@Variant">
+                    <ChildContent>
+                        <RadzenNumeric Name="ReviewStar" Min="0" Max="5" @bind-Value=@OrderFeedbackModel.ReviewStar />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ReviewStar" Text="Last name is required." />
+                        <RadzenLengthValidator Component="ReviewStar"/>
+                    </Helper>
+                </RadzenFormField>
+                <RadzenButton ButtonType="ButtonType.Submit" Text="Submit"></RadzenButton>
+            </RadzenStack>
+        </RadzenTemplateForm>
+    </RadzenCard>
+</div>

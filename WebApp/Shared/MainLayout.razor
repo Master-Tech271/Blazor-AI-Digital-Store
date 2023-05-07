@@ -1,0 +1,84 @@
+﻿@using DataModels;
+@inherits LayoutComponentBase
+
+<RadzenNotification/>
+<RadzenDialog />
+@*<div class="page">
+    @if (HelperClass.IsAuthorized)
+    {
+        <div class="sidebar">
+            <NavMenu />
+         </div>
+    }
+
+    <main>
+        @if(HelperClass.IsAuthorized)
+        {
+            <div class="top-row px-4" style="gap: 10px;">
+                <a href="@AppConstants.Route.About" target="_self">About</a>
+                <RadzenButton Click="HelperClass.LogoutAsync" ButtonType="ButtonType.Button" Text="Logout" />
+            </div>
+        }
+        
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>*@
+
+
+<RadzenLayout style="height: 100vh">
+    @if (HelperClass.IsAuthorized)
+    {
+    <RadzenHeader>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+            <RadzenSidebarToggle Click="@(() => SidebarExpanded = !SidebarExpanded)" />
+            <RadzenLabel Text="@AppConstants.AppName" />
+        </RadzenStack>
+    </RadzenHeader>
+        <RadzenSidebar @bind-Expanded="@SidebarExpanded">
+            <RadzenText TextAlign="TextAlign.Center" TextStyle="TextStyle.DisplayH6" class="my-3 my-3 rz-color-primary" Style="text-transform: capitalize;">
+                Welcome @Helper.User.FirstName @Helper.User.LastName
+            </RadzenText>
+            <RadzenPanelMenu>
+            <RadzenPanelMenuItem Text="Products" Icon="menu_book" Path="@AppConstants.Route.Products" />
+                <RadzenPanelMenuItem Text="Order History" Icon="history" Path="@AppConstants.Route.OrderHistory" />
+            <RadzenPanelMenuItem Text="About" Icon="description" Path="@AppConstants.Route.About" />
+        </RadzenPanelMenu>
+        <div class="rz-p-4 SidebarFooter">
+                <RadzenButton Click="HelperClass.LogoutAsync" ButtonType="ButtonType.Button" Text="Logout" />
+                <RadzenText TextStyle="TextStyle.DisplayH6" TextAlign="TextAlign.Center">
+                    @((MarkupString)AppConstants.AppDevelopedBy)
+                </RadzenText>
+        </div>
+        </RadzenSidebar>
+    }
+    <RadzenBody>
+        <div class="rz-p-4">
+            @if(!HelperClass.IsAuthorized)
+            {
+                <RadzenRow AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center">
+                    <RadzenColumn Size="12">
+                        <RadzenText TextStyle="TextStyle.DisplayH5" class="rz-color-primary-darker" Text="@AppConstants.AppName" TextAlign="TextAlign.Center"/>
+                </RadzenColumn>
+            </RadzenRow>
+            }
+            @*@if (HelperClass.IsLoading)
+            {
+                <div class="rz-m-12">
+                    <RadzenProgressBar Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+            </div>
+            }*@
+            @Body
+        </div>
+    </RadzenBody>
+    @if (!HelperClass.IsAuthorized)
+    {
+    <RadzenFooter>
+        <RadzenText Text="" TextStyle="TextStyle.DisplayH6" TextAlign="TextAlign.Center">
+                @((MarkupString)AppConstants.AppDevelopedBy)
+        </RadzenText>
+        </RadzenFooter>
+    }
+</RadzenLayout>

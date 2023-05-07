@@ -1,0 +1,12 @@
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\bin\Debug\net6.0\SQLORM.deps.json
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\bin\Debug\net6.0\SQLORM.dll
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\bin\Debug\net6.0\SQLORM.pdb
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\SQLORM.csproj.AssemblyReference.cache
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\SQLORM.GeneratedMSBuildEditorConfig.editorconfig
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\SQLORM.AssemblyInfoInputs.cache
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\SQLORM.AssemblyInfo.cs
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\SQLORM.csproj.CoreCompileInputs.cache
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\SQLORM.dll
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\refint\SQLORM.dll
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\SQLORM.pdb
+D:\personal\Dot Net Projects\User-Behaviour\SQLORM\obj\Debug\net6.0\ref\SQLORM.dll

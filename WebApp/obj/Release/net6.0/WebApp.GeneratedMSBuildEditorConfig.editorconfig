@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = WebApp
+build_property.RootNamespace = WebApp
+build_property.ProjectDir = D:\personal\Dot Net Projects\User-Behaviour\WebApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\personal\Dot Net Projects\User-Behaviour\WebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Components/Feedback.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGZWVkYmFjay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Components/ProductCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0Q2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Pages/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Pages/OrderHistory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJIaXN0b3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Pages/Product.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-snfefjgk3b
+
+[D:/personal/Dot Net Projects/User-Behaviour/WebApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c2wpa7m53j

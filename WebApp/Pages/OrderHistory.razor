@@ -1,0 +1,76 @@
+﻿@page "/orders"
+@using DataModels;
+<div class="OrderHistory">
+
+    <RadzenText TextStyle="TextStyle.H6" class="rz-color-primary-light"><strong>Order History</strong></RadzenText>
+
+    @if (HelperClass.IsLoading)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        if (OrderHistoryModel.Count == 0)
+        {
+            <p>No Order History Found</p>
+        }
+    }
+
+    <RadzenRow Gap="@gap" class="">
+
+        @foreach (var Order in OrderHistoryModel)
+        {
+            <RadzenColumn SizeMD="6" Size="12" SizeXS="12" SizeSM="6">
+                <RadzenCard Class="rz-my-12 rz-mx-auto">
+                    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" Class="rz-p-4">
+                        <RadzenImage Path="@Order.ProductImage" Style="width: 100px; height: 100px; border-radius: 50%;" />
+                        <RadzenStack Gap="0">
+
+                            <RadzenText TextStyle="TextStyle.H6"><b>@Order.ProductName</b></RadzenText>
+                            <RadzenText TextStyle="TextStyle.Subtitle1" Style="height:100px">@Order.ProductDescription</RadzenText>
+
+
+                        </RadzenStack>
+                    </RadzenStack>
+
+                    <RadzenCard class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        <RadzenText TextStyle="TextStyle.H6" class="rz-color-primary-light"><strong>Information</strong></RadzenText>
+                        <RadzenRow RowGap="0">
+                                <RadzenColumn SizeSM="12">
+                                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-primary-light rz-display-flex rz-mt-4 rz-mb-0">Total Price</RadzenText>
+                                    <RadzenText TextStyle="TextStyle.Body1">@(string.Format("{0} {1}", Order.TotalPrice, AppConstants.Product.Currency))</RadzenText>
+                                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-primary-light rz-display-flex rz-mt-4 rz-mb-0">Order Count</RadzenText>
+                                <RadzenText TextStyle="TextStyle.Body1">@Order.OrderCount</RadzenText>
+                            </RadzenColumn>
+
+                                
+                        </RadzenRow>
+
+
+                            <RadzenRow RowGap="1">
+                                
+
+                                <RadzenColumn SizeSM="12">
+                                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-primary-light rz-display-flex rz-mt-4 rz-mb-0">Review</RadzenText>
+                                    <RadzenText TextStyle="TextStyle.Body1">
+                                        @Order.ReviewStar
+                                    </RadzenText>
+                                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-primary-light rz-display-flex rz-mt-4 rz-mb-0">Feedback</RadzenText>
+                                    <RadzenText TextStyle="TextStyle.Body1" Style="height: 100px;">@Order.Feedback</RadzenText>
+                                </RadzenColumn>
+
+
+                            </RadzenRow>
+
+                    </RadzenCard>
+
+                    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0">
+                        <RadzenButton Variant="Variant.Text" Click="@(args => FeedbackAsync(Order))" Text="Feedback" />
+                    </RadzenStack>
+                </RadzenCard>
+            </RadzenColumn>
+        }
+
+    </RadzenRow>
+
+</div>

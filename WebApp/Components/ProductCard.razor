@@ -1,0 +1,20 @@
+﻿@using DataModels;
+<RadzenCard Class="rz-my-3 rz-mx-auto">
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" Class="rz-p-4">
+        <RadzenImage Path="@Product.Image" Style="width: 100px; height: 100px; border-radius: 50%;" />
+        <RadzenStack Gap="0">
+
+            <RadzenText TextStyle="TextStyle.H6" ><b>@Product.Name</b></RadzenText>
+
+        </RadzenStack>
+    </RadzenStack>
+
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="0.2rem">
+        <RadzenText TextStyle="TextStyle.Subtitle1" Style="height:200px">@Product.Description</RadzenText>
+    </RadzenStack>
+
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.SpaceBetween" Gap="0">
+        <RadzenText TextStyle="TextStyle.H4" TextAlign="TextAlign.Left"><b>@(string.Format("{0} {1}", Product.Price, AppConstants.Product.Currency))</b></RadzenText>
+        <RadzenButton Variant="Variant.Text" Click="@(args => OrderNowAsync(Product))" Text="Order Now" />
+    </RadzenStack>
+</RadzenCard>
