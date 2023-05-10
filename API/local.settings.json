@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "DataConnectionString": "Data Source=localhost;Initial Catalog=Ecommerce;Integrated Security=True;MultipleActiveResultSets=True;"
+  },
+  "Host": {
+    "LocalHttpPort": 7043,
+    "CORS": "*",
+    "CORSCredentials": false
+  }
+}
